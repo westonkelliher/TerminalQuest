@@ -16,11 +16,25 @@ for i in range(1000):
     time.sleep(.1)
 '''
 
-x = Animation(7,4, 'player', [[0,1],[1,1]])
+x1 = Animation(7,4, 'player', [[0,0],[1,0]])
+x2 = Animation(7,4, 'player', [[0,2],[1,2]])
+x3 = Animation(7,4, 'player', [[0,1],[1,1]])
+x4 = Animation(7,4, 'player', [[0,3],[1,3]])
 
-for i in range(20):
-    graphic.printGraphic(x.nextGraphic())
-    time.sleep(.1)
+
+for x in range(10):
+    for i in range(10):
+        graphic.printGraphic(x1.nextGraphic())
+        time.sleep(.1)
+    for i in range(10):
+        graphic.printGraphic(x2.nextGraphic())
+        time.sleep(.1)
+    for i in range(10):
+        graphic.printGraphic(x3.nextGraphic())
+        time.sleep(.1)
+    for i in range(10):
+        graphic.printGraphic(x4.nextGraphic())
+        time.sleep(.1)        
 
 
 
