@@ -3,11 +3,11 @@ import random
 uc = unichr
 
 
-SHOW_GRID = True
+SHOW_GRID = False
 
 
 
-dirt_chars=[uc(10241),uc(10242),uc(10244),' ']
+dirt_chars=[uc(10241),uc(10242),uc(10244),' ',' ',' ',' ']
 
 
 def randomTile(chars, n, grid=False):
