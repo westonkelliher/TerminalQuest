@@ -7,13 +7,18 @@ SHOW_GRID = False
 
 
 
-dirt_chars=[uc(10241),uc(10242),uc(10244),' ',' ',' ',' ']
+dirt_chars = '       '+uc(10241)+uc(10242)+uc(10244)
 
+def genLine(chars, n):
+    l = ''
+    for i in range(n*2):
+        l += random.choice(chars)
+    return l
 
 def randomTile(chars, n, grid=False):
-    t =  [ [random.choice(chars) for i in range(n*2)] for i in range(n)]
+    t =  [ genLine(chars, n) for i in range(n)]
     if grid:
-        t[-1] = t[-1][:-2]+['_',uc(9164)]
+        t[-1] = t[-1][:-2]+'_'+uc(9164)
     return t
 
 
@@ -30,9 +35,11 @@ class DirtTile():
 #grass        
 class GrassTile():
 
-    graphic = [['|', '|', '|', '|', '|', '|'],
-               ['|', '|', '|', '|', '|', '|'],
-               ['|', '|', '|', '|', '|', '|']]
+               
+    def __init__(self):
+        self.graphic = ['||||||',
+                        '||||||',
+                        '||||||']
 
     
     
